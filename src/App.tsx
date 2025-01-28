@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+      {/* Header */}
+      <header className="text-center mb-8">
+        <h1 className="text-4xl font-bold text-blue-600">Página de Teste</h1>
+        <p className="text-gray-600">Este é um exemplo básico usando Tailwind CSS.</p>
+      </header>
+
+      {/* Botão de contagem */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contador</h2>
+        <button
+          onClick={() => setCount((count) => count + 1)}
+          className="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg shadow hover:bg-blue-600"
+        >
+          Contagem: {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      {/* Links de navegação */}
+      <div className="mt-8 space-x-4">
+        <a
+          href="https://vite.dev"
+          target="_blank"
+          className="text-blue-500 hover:underline"
+        >
+          Aprenda sobre Vite
+        </a>
+        <a
+          href="https://react.dev"
+          target="_blank"
+          className="text-blue-500 hover:underline"
+        >
+          Aprenda sobre React
+        </a>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
