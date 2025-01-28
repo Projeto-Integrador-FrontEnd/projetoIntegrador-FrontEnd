@@ -1,11 +1,16 @@
 
 import { useState } from "react";
+
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
+
+import Sobre from "./pages/sobre/Sobre";
+
 
 function App() {
   return (
     <>
+
     <Navbar />
     <div className="min-h-screen bg-cream flex flex-col items-center justify-center p-4">
       {/* Header */}
@@ -37,6 +42,11 @@ function App() {
      
       </>
 );
+
+      
+
+
+
 }
 
 export default App;
