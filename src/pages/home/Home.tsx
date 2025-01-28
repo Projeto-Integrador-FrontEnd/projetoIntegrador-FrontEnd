@@ -5,8 +5,8 @@ function Home() {
 
     return (
         <>
-            <div className="bg-deep-navy flex justify-center">
-                <div className='container grid grid-cols-2 text-off-white'>
+            <div className="bg-gray flex justify-center">
+                <div className='container grid grid-cols-2 text-deep-navy'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
                         Olá! Você acessou o sistema JUPY
@@ -23,10 +23,10 @@ function Home() {
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://ik.imagekit.io/sanmi/Jupy-Sistema-de-RH.png?updatedAt=1738073192038"
-                            alt="Imagem de uma mulher segurando um notebook"
+                            src="https://ik.imagekit.io/sanmi/Jupy-Sistema-de-RH-removebg.png?updatedAt=1738080459832"
+                            alt="Logo do sistema JUPY"
                             className={`w-3/4 ${hovered ? "grayscale-0" : "grayscale"} transition-filter duration-500`}
-                            aria-label="Imagem de uma mulher vestindo uma camisa listrada segurando um notebook contra um fundo amarelo"
+                            aria-label="Logo do sistema JUPY escrito sistema de RH"
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(true)}
                         />
