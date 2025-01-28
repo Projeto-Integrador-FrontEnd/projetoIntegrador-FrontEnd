@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@alloc/quick-lru@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz"
+  integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
+
 "@ampproject/remapping@^2.2.0":
   version "2.3.0"
   resolved "https://registry.npmjs.org/@ampproject/remapping/-/remapping-2.3.0.tgz"
@@ -432,7 +437,7 @@
 
 "@phosphor-icons/react@^2.1.7":
   version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@phosphor-icons/react/-/react-2.1.7.tgz#b11a4b25849b7e3849970b688d9fe91e5d4fd8d7"
+  resolved "https://registry.npmjs.org/@phosphor-icons/react/-/react-2.1.7.tgz"
   integrity sha512-g2e2eVAn1XG2a+LI09QU3IORLhnFNAFkNbo2iwbX6NOKSLOwvEMmTa7CgOzEbgNWR47z8i8kwjdvYZ5fkGx1mQ==
 
 "@rollup/rollup-android-arm-eabi@4.32.1":
@@ -611,6 +616,18 @@
     "@tailwindcss/oxide-win32-arm64-msvc" "4.0.0"
     "@tailwindcss/oxide-win32-x64-msvc" "4.0.0"
 
+"@tailwindcss/postcss@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.0.0.tgz"
+  integrity sha512-lI2bPk4TvwavHdehjr5WiC6HnZ59hacM6ySEo4RM/H7tsjWd8JpqiNW9ThH7rO/yKtrn4mGBoXshpvn8clXjPg==
+  dependencies:
+    "@alloc/quick-lru" "^5.2.0"
+    "@tailwindcss/node" "^4.0.0"
+    "@tailwindcss/oxide" "^4.0.0"
+    lightningcss "^1.29.1"
+    postcss "^8.4.41"
+    tailwindcss "4.0.0"
+
 "@tailwindcss/vite@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@tailwindcss/vite/-/vite-4.0.0.tgz"
@@ -656,7 +673,7 @@
 
 "@types/cookie@^0.6.0":
   version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.6.0.tgz#eac397f28bf1d6ae0ae081363eca2f425bedf0d5"
+  resolved "https://registry.npmjs.org/@types/cookie/-/cookie-0.6.0.tgz"
   integrity sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==
 
 "@types/estree@1.0.6", "@types/estree@^1.0.6":
@@ -890,7 +907,7 @@ convert-source-map@^2.0.0:
 
 cookie@^1.0.1:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.0.2.tgz#27360701532116bd3f1f9416929d176afe1e4610"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-1.0.2.tgz"
   integrity sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==
 
 cross-spawn@^7.0.6:
@@ -1492,7 +1509,7 @@ picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-postcss@^8.4.49:
+postcss@^8.4.41, postcss@^8.4.49, postcss@^8.5.1:
   version "8.5.1"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.5.1.tgz"
   integrity sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==
@@ -1531,14 +1548,14 @@ react-refresh@^0.14.2:
 
 react-router-dom@^7.1.3:
   version "7.1.3"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.1.3.tgz#2788f7c670aa50275e16bb033b9b04b01a45b6dc"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-7.1.3.tgz"
   integrity sha512-qQGTE+77hleBzv9SIUIkGRvuFBQGagW+TQKy53UTZAO/3+YFNBYvRsNIZ1GT17yHbc63FylMOdS+m3oUriF1GA==
   dependencies:
     react-router "7.1.3"
 
 react-router@7.1.3:
   version "7.1.3"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.1.3.tgz#6c15c28838b799cb3058943e8e8015dbd6c16c7b"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-7.1.3.tgz"
   integrity sha512-EezYymLY6Guk/zLQ2vRA8WvdUhWFEj5fcE3RfWihhxXBW7+cd1LsIiA3lmx+KCmneAGQuyBv820o44L2+TtkSA==
   dependencies:
     "@types/cookie" "^0.6.0"
@@ -1617,7 +1634,7 @@ semver@^7.6.0:
 
 set-cookie-parser@^2.6.0:
   version "2.7.1"
-  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz#3016f150072202dfbe90fadee053573cc89d2943"
+  resolved "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz"
   integrity sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==
 
 shebang-command@^2.0.0:
@@ -1673,7 +1690,7 @@ ts-api-utils@^2.0.0:
 
 turbo-stream@2.4.0:
   version "2.4.0"
-  resolved "https://registry.yarnpkg.com/turbo-stream/-/turbo-stream-2.4.0.tgz#1e4fca6725e90fa14ac4adb782f2d3759a5695f0"
+  resolved "https://registry.npmjs.org/turbo-stream/-/turbo-stream-2.4.0.tgz"
   integrity sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==
 
 type-check@^0.4.0, type-check@~0.4.0:
