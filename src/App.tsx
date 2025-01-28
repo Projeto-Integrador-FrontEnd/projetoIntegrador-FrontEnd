@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import Footer from "./components/footer/Footer";
@@ -43,10 +42,10 @@ function App() {
       </>
 );
 
-      
+  
 
 
 
 }
 
-export default App;
+export default App
