@@ -4,16 +4,16 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-cream flex flex-col items-center justify-center p-4">
       {/* Header */}
       <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-blue-600">Página de Teste</h1>
-        <p className="text-gray-600">Este é um exemplo básico usando Tailwind CSS.</p>
+        <h1 className="text-4xl font-bold text-">Página de Teste</h1>
+        <p className="text-">Este é um exemplo básico usando Tailwind CSS.</p>
       </header>
 
       {/* Botão de contagem */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contador</h2>
+      <div className="bg-grayish p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold text-(--color-grayish) mb-4">Contador</h2>
         <button
           onClick={() => setCount((count) => count + 1)}
           className="px-4 py-2 bg-blue-500 text-white font-medium rounded-lg shadow hover:bg-blue-600"
