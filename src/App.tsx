@@ -1,47 +1,29 @@
-import { useState } from "react";
-import Usuario from "./pages/usuarios/Usuario";
-
-import Footer from "./components/footer/Footer";
-import Navbar from "./components/navbar/Navbar";
-
-import Sobre from "./pages/sobre/Sobre";
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Footer from './components/footer/Footer'
+import Navbar from './components/navbar/Navbar'
+import Home from './pages/home/Home'
+import Sobre from './pages/sobre/Sobre'
+import Funcionarios from './pages/funcionarios/Funcionarios'
 
 function App() {
   return (
     <>
-    <Usuario/>
-      <div className="min-h-screen bg-cream flex flex-col items-center justify-center p-4">
-        {/* Header */}
-        <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-">Página de Teste</h1>
-          <p className="text-">Este é um exemplo básico usando Tailwind CSS.</p>
-        </header>
-
-
-
-        {/* Links de navegação */}
-        <div className="mt-8 space-x-4">
-          <a
-            href="https://vite.dev"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            Aprenda sobre Vite
-          </a>
-          <a
-            href="https://react.dev"
-            target="_blank"
-            className="text-blue-500 hover:underline"
-          >
-            Aprenda sobre React
-          </a>
+      <BrowserRouter>
+        <Navbar />
+        <div className="min-h-[80vh]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/funcionarios" element={<Funcionarios />} />
+            <Route path="/sobre" element={<Sobre />} />
+          </Routes>
         </div>
-      </div>
-      
-    </>
-  );
+        <Footer />
+      </BrowserRouter>
 
+    </>
+  )
 }
 
-export default App
+export default App;

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const Usuario = () => {
+const Funcionarios = () => {
     const [search, setSearch] = useState('');
-    const usuarios = [
+    const funcionarios = [
         { id: 1, nome: 'João Silva', salario: 5000, desconto: 500, horasTrabalhadas: 160, cargo: 'Desenvolvedor', departamento: 'TI', admissao: '2020-03-15', ativo: true },
         { id: 2, nome: 'Maria Souza', salario: 7000, desconto: 700, horasTrabalhadas: 160, cargo: 'Gerente', departamento: 'RH', admissao: '2018-07-12', ativo: false },
         { id: 3, nome: 'Carlos Oliveira', salario: 4500, desconto: 400, horasTrabalhadas: 150, cargo: 'Analista de Suporte', departamento: 'TI', admissao: '2021-01-20', ativo: true },
@@ -25,25 +25,25 @@ const Usuario = () => {
         { id: 20, nome: 'Isabela Oliveira', salario: 5800, desconto: 580, horasTrabalhadas: 160, cargo: 'Analista de Marketing', departamento: 'Marketing', admissao: '2018-03-14', ativo: true }
     ];
 
-    const filteredUsuarios = usuarios.filter(usuario => usuario.nome.toLowerCase().includes(search.toLowerCase()));
+    const filteredFuncionarios = funcionarios.filter(funcionarios => funcionarios.nome.toLowerCase().includes(search.toLowerCase()));
 
     return (
-        <div className="p-6 bg-[#FFF] min-h-screen">
-            <h1 className="text-3xl font-semibold text-[#202D39] mb-6">Usuários</h1>
-            
+        <div className="p-6 bg-gray min-h-screen">
+            <h1 className="text-3xl font-semibold text-deep-navy mb-6">Funcionários</h1>
+
             <div className="mb-6">
                 <input
                     type="text"
                     placeholder="Buscar por nome..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="p-4 border border-[#9CB8C7] rounded-lg w-full max-w-md"
+                    className="p-4 border border-deep-navy bg-off-white rounded-lg w-full max-w-md"
                 />
             </div>
 
             <div className="overflow-x-auto bg-white shadow-md rounded-lg">
                 <table className="min-w-full table-auto text-sm text-left text-[#202D39]">
-                    <thead className="bg-[#9CB8C7] text-white">
+                    <thead className="bg-deep-navy text-white">
                         <tr>
                             <th className="px-4 py-3 font-medium">Nome</th>
                             <th className="px-4 py-3 font-medium">Cargo</th>
@@ -56,17 +56,17 @@ const Usuario = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredUsuarios.map(usuario => (
-                            <tr key={usuario.id} className="border-t hover:bg-[#F4F4F4]">
-                                <td className="px-4 py-3">{usuario.nome}</td>
-                                <td className="px-4 py-3">{usuario.cargo}</td>
-                                <td className="px-4 py-3">{usuario.departamento}</td>
-                                <td className="px-4 py-3">R$ {usuario.salario.toFixed(2)}</td>
-                                <td className="px-4 py-3">R$ {usuario.desconto.toFixed(2)}</td>
-                                <td className="px-4 py-3">{usuario.horasTrabalhadas}h</td>
-                                <td className="px-4 py-3">{new Date(usuario.admissao).toLocaleDateString()}</td>
-                                <td className={`px-4 py-3 ${usuario.ativo ? 'text-green-600' : 'text-red-600'}`}>
-                                    {usuario.ativo ? 'Ativo' : 'Inativo'}
+                        {filteredFuncionarios.map(funcionarios => (
+                            <tr key={funcionarios.id} className="border-t hover:bg-[#F4F4F4]">
+                                <td className="px-4 py-3">{funcionarios.nome}</td>
+                                <td className="px-4 py-3">{funcionarios.cargo}</td>
+                                <td className="px-4 py-3">{funcionarios.departamento}</td>
+                                <td className="px-4 py-3">R$ {funcionarios.salario.toFixed(2)}</td>
+                                <td className="px-4 py-3">R$ {funcionarios.desconto.toFixed(2)}</td>
+                                <td className="px-4 py-3">{funcionarios.horasTrabalhadas}h</td>
+                                <td className="px-4 py-3">{new Date(funcionarios.admissao).toLocaleDateString()}</td>
+                                <td className={`px-4 py-3 ${funcionarios.ativo ? 'text-green-600' : 'text-red-600'}`}>
+                                    {funcionarios.ativo ? 'Ativo' : 'Inativo'}
                                 </td>
                             </tr>
                         ))}
@@ -77,4 +77,4 @@ const Usuario = () => {
     );
 }
 
-export default Usuario;
+export default Funcionarios;

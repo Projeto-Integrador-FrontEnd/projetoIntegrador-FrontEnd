@@ -1,13 +1,20 @@
+import { Link } from "react-router-dom"
 
 function Navbar() {
     return (
         <>
-            <div className="w-full flex justify-center py-6 bg-gray-400 text-white">
-                <div className="container flex justify-between antialiased text-2xl font-bold">
-                    Jupy
-                    <div className="flex gap-10 font-medium text-base">
-                        <button className="hover:text-stone-200 ">Sobre Nós</button>
-                        <button className="hover:text-stone-200">Funcionários</button>
+            <div className="w-full flex justify-center py-6 bg-deep-navy text-white">
+                <div className="container flex justify-between antialiased text-3xl font-bold">
+                    <Link to='/home' className='hover:text-sky-blue'>
+                        Jupy
+                    </Link>
+                    <div className="flex gap-10 font-medium text-lg">
+                        <Link to='/sobre' className='hover:text-sky-blue'>
+                            Sobre nós
+                        </Link>
+                        <Link to='/funcionarios' className='hover:text-sky-blue'>
+                            Funcionários
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -15,4 +22,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;

@@ -1,5 +1,5 @@
 import { GithubLogo, FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
-import { ReactNode, useContext } from 'react'
+import { ReactNode } from 'react'
 
 function Footer() {
 
@@ -7,37 +7,36 @@ function Footer() {
 
     let component: ReactNode
 
-        component = (
+    component = (
 
-            <div className="flex justify-center bg-indigo-900 text-white">
-                <div className="container flex flex-col items-center py-4">
-                    <p className='text-xl font-bold'>
-                        Jupy - Sistemas de RH | Copyright: {data}
-                    </p>
-                    <p className='text-lg'>Acesse nossas redes sociais</p>
-                    <div className='flex gap-2'>
-                        <a href="https://github.com/Projeto-Integrador-FrontEnd/projetoIntegrador-FrontEnd" target="_blank">
-                            <GithubLogo size={48} weight='bold' />
-                        </a>
-                        <a href="https://www.linkedin.com/school/generationbrasil" target="_blank">
-                            <LinkedinLogo size={48} weight='bold' />
-                        </a>
-                        <a href="https://www.instagram.com/generationbrasil" target="_blank">
-                            <InstagramLogo size={48} weight='bold' />
-                        </a>
-                        <a href="https://www.facebook.com/generationbrasil" target="_blank">
-                            <FacebookLogo size={48} weight='bold' />
-                        </a>
-                    </div>
+        <div className="flex justify-center bg-deep-navy text-white">
+            <div className="container flex flex-col items-center py-4">
+                <p className='text-xl font-bold'>
+                    Jupy - Sistema de RH | Copyright: {data}
+                </p>
+                <p className='text-lg'>Acesse nossas redes sociais</p>
+                <div className='flex gap-2'>
+                    <a href="https://github.com/Projeto-Integrador-FrontEnd/projetoIntegrador-FrontEnd" target="_blank">
+                        <GithubLogo size={48} weight='bold' />
+                    </a>
+                    <a href="https://www.linkedin.com/school/generationbrasil" target="_blank">
+                        <LinkedinLogo size={48} weight='bold' />
+                    </a>
+                    <a href="https://www.instagram.com/generationbrasil" target="_blank">
+                        <InstagramLogo size={48} weight='bold' />
+                    </a>
+                    <a href="https://www.facebook.com/generationbrasil" target="_blank">
+                        <FacebookLogo size={48} weight='bold' />
+                    </a>
                 </div>
             </div>
-
-        )
+        </div>
+    )
     return (
         <>
-            { component }
+            {component}
         </>
     )
 }
 
-export default Footer
+export default Footer;
