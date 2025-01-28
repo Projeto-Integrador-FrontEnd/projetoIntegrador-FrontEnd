@@ -1,9 +1,11 @@
 import { useState } from "react";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
+    <>
     <div className="min-h-screen bg-cream flex flex-col items-center justify-center p-4">
       {/* Header */}
       <header className="text-center mb-8">
@@ -40,6 +42,8 @@ function App() {
         </a>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
